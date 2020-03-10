@@ -10,7 +10,7 @@ class Results extends React.Component {
     render() {
         if (!this.state.results.mondays) {
             return (
-                <img src="https://media.giphy.com/media/LTFbyWuELIlqlXGLeZ/giphy.gif"></img>
+                <img className="img-fluid" src="https://media.giphy.com/media/LTFbyWuELIlqlXGLeZ/giphy.gif"></img>
             );
         }
         return (
