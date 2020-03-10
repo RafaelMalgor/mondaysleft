@@ -18,7 +18,7 @@ class Results extends React.Component {
                 <ul className={styles.list + " list-group list-group-flush"}>
                     <li className="list-group-item">⚰️ You have roughly {this.state.results.mondays} mondays left</li>
                     <li className="list-group-item">⚰️ You have around {this.state.results.hours} hours left</li>
-                    <li className="list-group-item">⚰️ You have around {this.state.results.seconds} seconds left</li>
+                    <li className="list-group-item">⚰️ You have at most {this.state.results.seconds} seconds left</li>
                 </ul>
             </div>);
     }
