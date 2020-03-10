@@ -3,7 +3,7 @@ class LabeledNumberInput extends React.Component {
     render() {
       return (
         <div><label htmlFor="imp">{this.props.label}</label>
-          <input type="number" className="form-control form-control-lg" id="imp"
+          <input type="number" min={this.props.min} className="form-control form-control-lg" id="imp"
             onChange={this.props.onChange}
             value={this.props.value}
             placeholder="..." />

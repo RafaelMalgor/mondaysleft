@@ -27,6 +27,7 @@ class App extends React.Component {
           <div className="d-flex flex-column justify-content-center">
             <form className="border border-info rounded p-3">
               <LabeledNumberInput
+                min="0"
                 label="Age:"
                 onChange={this.onChangeAge}
                 value={this.state.age}
@@ -34,7 +35,9 @@ class App extends React.Component {
 
               </LabeledNumberInput>
               <div className="mt-3">
-                <LabeledNumberInput className="m-top-2"
+                <LabeledNumberInput
+                  min="0"
+                  className="m-top-2"
                   label="You think you are going to die at:"
                   onChange={this.onChangeDeath}
                   value={this.state.death}
@@ -123,7 +126,7 @@ class App extends React.Component {
     }
     else if (death > 60) {
       message = "Saving for retirement?";
-    }    
+    }
     else if (death > 50) {
       message = "Maybe take a walk from time to time";
     }
@@ -157,7 +160,7 @@ class App extends React.Component {
     return {
       mondays: this.calculateMondays(yearsLeft),
       hours: this.calculateHours(yearsLeft),
-      seconds:this.calculateSeconds(yearsLeft)
+      seconds: this.calculateSeconds(yearsLeft)
     };
   }
 
@@ -181,7 +184,7 @@ class App extends React.Component {
 
   calculateSeconds(yearsLeft) {
     if (yearsLeft >= 0) {
-      return yearsLeft * 31556952 ;
+      return yearsLeft * 31556952;
     }
     else {
       return undefined;
